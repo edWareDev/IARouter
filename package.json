@@ -1,0 +1,32 @@
+{
+  "name": "multimail_getter_mails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env .",
+    "dev": "node --env-file=.env --watch .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "express": "node --env-file=.env --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "11.1.0",
+    "cors": "2.8.5",
+    "express": "5.1.0",
+    "fastify": "5.6.0",
+    "imap": "0.8.19",
+    "imapflow": "1.0.195",
+    "mailparser": "3.7.4",
+    "ollama": "0.5.17",
+    "string-strip-html": "13.4.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.35.0",
+    "eslint": "9.35.0",
+    "globals": "16.3.0"
+  }
+}
