@@ -2,7 +2,7 @@
   "name": "multimail_getter_mails",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
     "start": "node --env-file=.env .",
@@ -15,13 +15,16 @@
   "license": "ISC",
   "dependencies": {
     "@fastify/cors": "11.1.0",
+    "chromadb": "^3.0.17",
     "cors": "2.8.5",
     "express": "5.1.0",
     "fastify": "5.6.0",
     "imap": "0.8.19",
     "imapflow": "1.0.195",
+    "langchain": "^0.3.35",
     "mailparser": "3.7.4",
     "ollama": "0.5.17",
+    "pdf-parse": "^2.1.7",
     "string-strip-html": "13.4.13"
   },
   "devDependencies": {
