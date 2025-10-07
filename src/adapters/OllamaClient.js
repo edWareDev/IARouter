@@ -2,7 +2,7 @@ import { Ollama } from "ollama";
 
 export const OLLAMA_CONFIG = {
     host: 'http://localhost:11434',
-    model: 'qwen2.5:3b',
+    model: 'gpt-oss:120b-cloud',
     embedModel: 'nomic-embed-text'
 };
 

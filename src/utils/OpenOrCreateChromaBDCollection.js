@@ -8,6 +8,7 @@ const client = new ChromaClient({
 
 export async function getOrCreateCollection(name) {
     const collections = await client.listCollections();
+
     const exists = collections.find(c => c.name === name);
 
     if (exists) {
@@ -18,6 +19,8 @@ export async function getOrCreateCollection(name) {
     return await client.createCollection({
         name,
         metadata: { created: new Date().toISOString() },
-        embeddingFunction: null, // evita el intento de usar @chroma-core/default-embed
+        embeddingFunction: {
+            generate: async () => [], // evita el warning
+        },
     });
 }
