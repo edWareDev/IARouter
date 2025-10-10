@@ -9,5 +9,11 @@ const client = new ChromaClient({
 export async function listAllCollections() {
     const collections = await client.listCollections();
 
-    return [...collections];
+    return [...collections.map(col => {
+        return {
+            id: col.id,
+            name: col._name,
+            created: col.metadata._created,
+        };
+    })];
 }

@@ -9,6 +9,7 @@ export const aiRouter = Router();
 
 aiRouter.post("/tag-mail", tagMailController);
 aiRouter.post("/sumarize-mail", sumarizeMailController);
+
 aiRouter.post("/embed-pdf", embedPDFToDB);
 aiRouter.post("/question-to-doc/:docName", questionToDocController);
 aiRouter.post("/generate-question-of-doc/:docName", generateQuestionOfDocController);
