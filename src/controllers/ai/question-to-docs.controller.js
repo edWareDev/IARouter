@@ -7,7 +7,7 @@ import { textEmbed } from "../../utils/textEmbed.js";
 import { updateChatHistory } from "../../utils/updateChatHistory.js";
 
 
-export const questionToDocController = async (req, res) => {
+export const questionToDocsController = async (req, res) => {
     try {
         const { chatId, question, wordLimit } = req.body;
         if (!question) return res.status(HTTP_CODES._400_BAD_REQUEST).json({ error: "Falta la pregunta" });

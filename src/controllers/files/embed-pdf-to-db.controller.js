@@ -27,6 +27,7 @@ export const embedPDFToDB = async (req, res) => {
 
         for (let i = 0; i < chunks.length; i++) {
             const embRes = await textEmbed(chunks[i], "qwen3-embedding:4b");
+
             const vector = embRes.embeddings?.[0] || embRes.embedding || embRes[0];
 
             if (!Array.isArray(vector)) {
@@ -44,7 +45,7 @@ export const embedPDFToDB = async (req, res) => {
 
         res.json({ message: `Indexación completada. Chunks: ${chunks.length}` });
     } catch (error) {
-        console.error("Error en questionToPdfController:", error.message);
+        console.error("Error en embed-to-pdf.controller:", error.message);
         res.status(HTTP_CODES._500_INTERNAL_SERVER_ERROR).json({ error: error.message || "Error interno" });
     }
 };

@@ -4,6 +4,7 @@ import { sumarizeMailController } from "../controllers/ai/sumarize-mail.controll
 import { embedPDFToDB } from "../controllers/files/embed-pdf-to-db.controller.js";
 import { questionToDocController } from "../controllers/ai/question-to-doc.controller.js";
 import { generateQuestionOfDocController } from "../controllers/ai/generate-question-of-doc.controller.js";
+import { simulatorController } from "../controllers/ai/simulator.controller.js";
 
 export const aiRouter = Router();
 
@@ -12,6 +13,7 @@ aiRouter.post("/sumarize-mail", sumarizeMailController);
 
 aiRouter.post("/embed-pdf", embedPDFToDB);
 aiRouter.post("/question-to-doc/:docName", questionToDocController);
+aiRouter.post("/simulator", simulatorController);
 aiRouter.post("/generate-question-of-doc/:docName", generateQuestionOfDocController);
 
 
